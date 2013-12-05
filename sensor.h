@@ -9,6 +9,7 @@
 #ifndef SENSOR_H_
 #define SENSOR_H_
 
+void initSensors(void);
 unsigned int getLeftSensor();
 unsigned int getRightSensor();
 unsigned int getCenterSensor();
