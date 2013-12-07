@@ -42,7 +42,7 @@ unsigned int getRightSensor()
 
 unsigned int getCenterSensor()
 {
-	ADC10CTL0 &= ~ENC;      					// Disable core to make changes to control bits in ADC
+	ADC10CTL0 &= ~ENC;      					// Disable the core to make changes to control bits in ADC
 	ADC10CTL1 &= ~(INCH_15);					// Clear input channel
 	ADC10CTL1 |= INCH_5;                        // Set input channel to A5
 	ADC10CTL0 |= ENC + ADC10SC;                 // Enable the core and begin sampling/conversion

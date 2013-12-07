@@ -1,9 +1,15 @@
+/************************************
+ * Author: C2C Caleb Ziegler
+ * Date: 07 DEC 13
+ * Description: Presence of wall near
+ * left sensor turns on LED1 and
+ * presence of wall near right sensor
+ * turns on LED2. Uses sensor.h and
+ * sensor.c to interact with sensors.
+ ***********************************/
+
 #include <msp430.h> 
 #include "sensor.h"
-
-/*
- * main.c
- */
 
 void main(void) {
     WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
