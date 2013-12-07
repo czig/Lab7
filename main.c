@@ -1,4 +1,5 @@
 #include <msp430.h> 
+#include "sensor.h"
 
 /*
  * main.c
@@ -7,10 +8,12 @@ void main(void) {
     WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
 	
     initSensors();
+	P1DIR |= BIT0;
+	P1DIR |= BIT6;
     while (1)
     {
-    	P1DIR |= BIT0;
-    	if (getLeftSensor() < 0x1FF)
+
+    	if (getLeftSensor() < 0x2FE)
     	{
     		P1OUT &= ~BIT0;
     	}
@@ -18,7 +21,7 @@ void main(void) {
     	{
     		P1OUT |= BIT0;
     	}
-    	P1DIR |= BIT6;
+
     	if (getRightSensor() < 0x1FF)
     	{
     		P1OUT &= ~BIT6;
@@ -27,14 +30,6 @@ void main(void) {
     	{
     		P1OUT |= BIT6;
     	}
-    	P1DIR |= BIT0|BIT6;
-    	if (getCenterSensor() < 0x1FF)
-    	{
-    		P1OUT &= ~(BIT0|BIT6);
-    	}
-    	else
-    	{
-    		P1OUT |= (BIT0|BIT6);
-    	}
+
     }
 }
