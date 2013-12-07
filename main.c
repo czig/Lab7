@@ -20,7 +20,7 @@ void main(void) {
     while (1)
     {
     	// Turn on left LED on if after ADC, left sensor returns a value greater than 2FE, and if not, turn LED off
-    	if (getLeftSensor() < 0x3CC)
+    	if (getLeftSensor() < 0x3EA)
     	{
     		P1OUT &= ~BIT0; // turn left LED off
     	}
@@ -30,7 +30,7 @@ void main(void) {
     	}
 
     	// Turn on right LED if after ADC, right sensor returns a value greater than 1FF, and if not, turn LED off
-    	if (getRightSensor() < 0x1FF)
+    	if (getRightSensor() < 0x0E8)
     	{
     		P1OUT &= ~BIT6; // turn right LED off
     	}
