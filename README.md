@@ -8,8 +8,9 @@ This repository includes the files main.c, sensor.h, and sensor.c, which allow t
 ##Grading
 
  - Prelab....................... 8.5
- - Required Functionality....... 
- - B-Functionality.............. 
+ - Required Functionality....... 35
+ - B-Functionality.............. 10
+ - A-Functionality.............. 10
 
 ##Hardware Needed:
 
@@ -20,9 +21,11 @@ This repository includes the files main.c, sensor.h, and sensor.c, which allow t
 
 ##Operation: 
 
- - This repository uses the code provided along with the MSP430 and the robot to operate the sensors on the robot. The code uses the MSP430 to perform analong-to-digital conversion on the analog signals received from the sensors, which produces a digital signal that can be used in various functions. In this case, main.c uses those digital signals to light up LED1 and LED2 on the MSP430 Launchpad board.  The pins on the MSP430 used to perform the ADC are P1.3 for the left sensor, P1.4 for the right sensor, and P1.5 for the center sensor. 
+ - This repository uses the code provided along with the MSP430 and the robot to operate the sensors on the robot. The code uses the MSP430 to perform analong-to-digital conversion on the analog signals received from the sensors, which produces a digital signal that can be used in various functions. In this case, main.c uses those digital signals to light up LED1 and LED2 on the MSP430 Launchpad board.  The pins on the MSP430 used to perform the ADC are P1.3 for the left sensor, P1.4 for the right sensor, and P1.5 for the center sensor. Note: depending on the robot used, there may be problems with loading for either of the sensors. To fix this problem, adjust the potentiometer for each sensor, make the clock as slow as possible (clock divider), and if these changes don't work, move the sensors themselves to have a less direct line of sight. 
 
  - Required Functionality - The presence of a wall next to the left sensor lights up LED1 on the MSP430 Launchpad board, and the presense of a wall next to the right sensor lights up LED2 on the MSP430 Launchpad board. The left and right directions are relative to standing behind the robot. The distance that causes the robot to register the wall and turn either LED on is defined in the conditional statements (of the if statements) in main.c. 
+ - B-Functionality - release a sensor library. View the Sensor library in the repositories.
+ - A-Functionality - Characterize the sensors with tables and graphs. See the tables and graphs included in this repository for the demonstration of A-functionality.
 
 ##Functions: 
 
