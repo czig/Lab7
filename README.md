@@ -5,6 +5,8 @@ A/D Conversion - "Robot Sensing"
 
 This repository includes the files main.c, sensor.h, and sensor.c, which allow the MSP430 to interface with the left and right sensors on the robot to light up the left and right LEDs on the MSP430, respectively. Sensor.h provides the functions required to interface with left, right, and center sensors, while sensor.c contains the implementations of those functions. 
 
+NOTE: Numerous comments in sensor.c because after the code for one sensor was nailed down, this code was copied and pasted to be used with the other sensors (only the numbers needed to be changed at this point). 
+
 ##Grading
 
  - Prelab....................... 8.5
