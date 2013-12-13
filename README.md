@@ -10,7 +10,7 @@ NOTE: Numerous comments in sensor.c because after the code for one sensor was na
 ##Grading
 
  - Prelab....................... 8.5
- - Required Functionality....... 35
+ - Required Functionality....... 40
  - B-Functionality.............. 10
  - A-Functionality.............. 10
 
